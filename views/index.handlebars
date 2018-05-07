@@ -1,0 +1,67 @@
+<div class="container-fluid text-warning p-0">
+  <div class="row m-0">
+
+    <!-- Ordered Burgers area -->
+    <div class="ordered-burgers-area col-sm-5 py-3 float-left">
+      <h4 class="text-center">Burgers ordered</h4>
+      {{#each burgers}} {{#unless devoured}}
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>
+              <strong class="mt-2"> Order# {{this.id}} {{this.burger_name}}</strong>
+            </td>
+            <td>
+              <strong> - for Cust# {{this.seq_customer.id}} {{this.seq_customer.customer_name}}</strong>
+            </td>
+            <td>
+              <button data-burger-id="{{this.id}}" id="devour-btn" class="btn btn-outline-warning float-right">Devour it!</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      {{/unless}} {{/each}}
+    </div>
+
+    <!-- Order area -->
+    <div class="order-area col-sm-2 py-3 text-center float-center bg-dark">
+      <h4>Order a burger!</h4>
+      <form class="create-form">
+        <div class="form-group">
+          <label for="burger-name-input">Burger Description</label>
+          <input class="form=control" id="burger-name-input" name="burgerName" rows="1">
+          </input>
+          <label for="customer-name-input">Customer Name</label>
+          <input class="form=control" id="customer-name-input" name="customerName" rows="1">
+          </input>
+        </div>
+        <button id="new-burger-btn" type="submit" class="btn-lg btn-outline-warning">Submit</button>
+      </form>
+    </div>
+
+    <!-- Devoured Burgers area -->
+    <div class="devoured-burgers-area col-sm-5 py-3 float-right">
+      <h4 class="text-center">Burgers devoured</h4>
+      {{#each burgers}} {{#if devoured}}
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>
+              <button data-burger-id="{{this.id}}" id="delete-burger-btn" class="btn btn-sm btn-outline-warning float-left">Delete Burger</button>
+            </td>
+            <td>
+              <strong class="mt-2"> Order# {{this.id}} {{this.burger_name}}</strong>
+            </td>
+            <td>
+              <strong> Cust# {{this.seq_customer.id}} {{this.seq_customer.customer_name}}</strong>
+            </td>
+            <td>
+              <button data-cust-id="{{this.seq_customer.id}}" id="delete-name-btn" class="btn btn-sm btn-outline-warning float-right">Delete Name</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      {{/if}} {{/each}}
+    </div>
+  </div>
+</div>

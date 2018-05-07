@@ -1,0 +1,49 @@
+
+.jumbotron {
+  background-color: #e6ffcc;
+}
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/burger_joint.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.jumbotron {
+  background-color: #d2b48c;
+}
+h1 {
+  font-family: 'Nosifer', cursive;
+  font-size: 54px;
+  color: #ffd700;
+  text-shadow: 4px 4px 10px #8b4513;
+}
+.burger-pic {
+  border: none; 
+  height: 175px; 
+  width: 150px
+}
+.ordered-burgers-area {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))
+}
+.order-area {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  border: 2px solid #ffd700;
+}
+.devoured-burgers-area {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))
+}
+input {
+  width: 170px;
+  background-color: #ffd700;
+}
+.btn, .btn-lg, .btn-sm {
+  background-color: #523000;  
+}
+
+.btn-sm {
+  width: 60px;
+    white-space:normal !important;
+    word-wrap: break-word; 
+}
+  
