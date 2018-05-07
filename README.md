@@ -1,4 +1,7 @@
 # sequelizedBurger is "Eat Da Burger" modified to use Sequelize.js. 
+                            
+<img src="public/assets/img/sequelizeBurgers-pic.jpg" alt="seqBurgers-pic"/>
+
 Eat Da Burger is a full stack web app that enables customers to order burgers and devour them. This application uses the Sequelize.js library for all SQL queries, inserts, updates and delete actions. 
 All burgers entered and devoured are stored in a mySQL database until they are deleted by a user.  
 
